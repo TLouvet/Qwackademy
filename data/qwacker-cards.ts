@@ -28,7 +28,7 @@ export const QWACKER_CARDS = {
     name: 'Qwackitect',
     src: `${qwackerFolder}/qwackitect.png`,
     gameDescription: 'I will show you a maze, try to solve it as fast as possible',
-    href: '/games/qwarchitect',
+    href: '/games/qwackitect',
   },
   archelologist: {
     name: 'Qwackeologist',
