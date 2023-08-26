@@ -1,0 +1,8 @@
+export const QWACKEMATICIAN_RULES: string[] = [
+  `Ah, greetings, seeker of numerical enlightenment! You have entered the domain of the Qwackematician - where the symphony of digits and letters weaves the fabric of your challenge. I am the conductor of numbers, the architect of sequences, and I shall guide you through a trial that shall test the very foundations of your numerical prowess.`,
+  `Listen closely, for the rules are as elegant as they are unforgiving. I shall unveil before you a sequence - a dance of digits and letters that shall imprint upon your mind. Your task, once the veil is lifted, is to transcribe this sequence with unwavering accuracy, a testament to your cognitive acuity.`,
+  `As you embark upon this journey, remember that each correct transcription begets the next challenge, each sequence one digit or letter longer than the last. A harmonious symphony of recall and precision shall play out, with your success etching the score of your triumph.`,
+  `Two modes shall guide your path: The "Mini Qwacker," where digits stand alone as the stars of your challenge, and the "Master Qwacker," where letters join the cosmic dance. Your score, a badge of your achievement, shall shine as you dare the realm of competitive play.`,
+  `But heed this warning, for the moment an error mars your transcription, the symphony shall halt, the sequence shall reset, and your challenge shall end. It takes but one misstep to dim the light of your quest.`,
+  `Now, embrace the rhythmic cadence of this trial. Allow the sequences to flow through you, and let your memory echo with their melody. When the time comes to inscribe them upon the parchment of reality, may your mind be swift, your hand steady, and your memory unwavering.`,
+];
