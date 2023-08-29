@@ -8,6 +8,13 @@ export default function useGameCommon() {
   const [canPlay, setCanPlay] = useState(false);
   const [isError, setIsError] = useState(false);
 
+  function handleReplay() {
+    setSelectedMode('none');
+    setIsError(false);
+    setLevel(1);
+    setCanPlay(false);
+  }
+
   return {
     selectedMode,
     setSelectedMode,
@@ -17,5 +24,6 @@ export default function useGameCommon() {
     setCanPlay,
     isError,
     setIsError,
+    handleReplay,
   };
 }
