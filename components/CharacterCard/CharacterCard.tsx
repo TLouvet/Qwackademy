@@ -7,6 +7,7 @@ type CharacterCardProps = {
   name: string;
   src: string;
   gameDescription?: string;
+  available?: boolean;
   withPlayButton?: boolean;
   href?: string;
   width?: number;
@@ -17,6 +18,7 @@ export default function CharacterCard({
   name,
   src,
   gameDescription,
+  available = false,
   withPlayButton = false,
   href,
   width = 350,
@@ -36,10 +38,12 @@ export default function CharacterCard({
       <article className={style.illustrated_card} onMouseEnter={enterCard} onMouseLeave={leaveCard}>
         <div className={style.container}>
           <Image src={src} width={width} height={height} alt='' sizes='(min-width: 768px) 350px, 350px' />
+
           {showButtons && (
             <div className={style.btns_container}>
               <p>{gameDescription}</p>
-              <Button href={href}>Play</Button>
+              {available && <Button href={href}>Play</Button>}
+              {!available && <p>Available in a future update</p>}
             </div>
           )}
         </div>
