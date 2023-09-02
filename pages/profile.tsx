@@ -2,9 +2,7 @@ import PageLayout from '@/components/Layout/PageLayout';
 
 export default function ProfilePage() {
   return (
-    <PageLayout withBackLink>
-      <h1>My Qwacker Profile</h1>
-
+    <PageLayout withBackLink title='My Qwacker Profile'>
       <p>Avatar</p>
       <p>Name</p>
       <p>Bio</p>
