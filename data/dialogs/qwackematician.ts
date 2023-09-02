@@ -1,5 +1,5 @@
 export const QWACKEMATICIAN_DIALOG = {
-  tempText: "Let's see how you do with this sequence ",
+  tempText: "Let's see how you do with this sequence : ",
   questionText: 'What was the sequence?',
   lvl1To4TextValid: 'Excellent, well played!',
   lvl5TextValid: 'Ah, a memory virtuoso in the making!',

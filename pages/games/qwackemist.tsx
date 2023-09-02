@@ -1,13 +1,13 @@
 import PageLayout from '@/components/Layout/PageLayout';
-import QwackerModeSelector from '@/components/QwackerModeSelector/QwackerModeSelector';
-import WelcomingSection from '@/components/WelcomingSection/WelcomingSection';
 import { QWACKER_CARDS } from '@/data/qwacker-cards';
 import { QWACKEMIST_RULES } from '@/data/rules/qwackemist';
-import { QwackerMode } from '@/features/types';
 import useGameCommon from '@/hooks/useGameCommon';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Image from 'next/image';
+import { GamePageIntro } from '@/components/GamePageIntro/GamePageIntro';
+import { DialogBox } from '@/components/DialogBox/DialogBox';
+import GameScreenTop from '@/components/GameScreenTop/GameScreenTop';
 
 export default function QwackemistPage() {
   const { selectedMode, setSelectedMode, level, setLevel, canPlay, setCanPlay, isError, setIsError, handleReplay } =
@@ -19,32 +19,19 @@ export default function QwackemistPage() {
   const handleValidate = () => {};
 
   return (
-    <PageLayout withBackLink>
-      <h1>The Qwackemist Potion Course</h1>
-
-      {selectedMode === 'none' && (
-        <div>
-          <WelcomingSection title='Rules' rules={QWACKEMIST_RULES} character={QWACKER_CARDS.alchemist} />
-          <QwackerModeSelector handlePlay={handlePlay} />
-        </div>
-      )}
+    <PageLayout withBackLink title='The Qwackemist Potion Course'>
+      <GamePageIntro
+        rules={QWACKEMIST_RULES}
+        character={QWACKER_CARDS.alchemist}
+        handlePlay={handlePlay}
+        selectedMode={selectedMode}
+      />
 
       {selectedMode !== 'none' && (
         <section id='game' className='mt-5'>
           <div style={{ minHeight: '100vh' }}>
-            <h2>
-              Level {level} - {selectedMode}{' '}
-              {isError && (
-                <Button onClick={handleReplay} className='ms-3'>
-                  Try again
-                </Button>
-              )}
-            </h2>
-
-            <div className='d-flex align-items-center mb-5' style={{ background: '#2d30376e' }}>
-              <Image width={150} height={150} src={QWACKER_CARDS.arcanist.src} alt='' />
-              <p className='p-3'>{currentText}</p>
-            </div>
+            <GameScreenTop level={level} selectedMode={selectedMode} handleReplay={handleReplay} isError={isError} />
+            <DialogBox imageSrc={QWACKER_CARDS.alchemist.src} text={currentText} />
 
             {canPlay && (
               <div>
