@@ -2,7 +2,7 @@ import PageLayout from '@/components/Layout/PageLayout';
 
 export default function AchievementsPage() {
   return (
-    <PageLayout withBackLink>
+    <PageLayout withBackLink title='Hall of Achievements'>
       <h1>Hall of Achievements</h1>
       <p>Here is the list of achievements that will make you one true Master Qwacker</p>
 
