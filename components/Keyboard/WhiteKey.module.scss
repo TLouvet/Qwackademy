@@ -1,0 +1,11 @@
+.whiteKey {
+  width: 50px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6a8562 !important;
+  }
+}

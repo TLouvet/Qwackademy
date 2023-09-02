@@ -1,7 +1,10 @@
 import { QwackerMode } from '@/features/types';
 import { useState } from 'react';
+import usePreventCopy from './usePreventCopy';
 
 export default function useGameCommon() {
+  usePreventCopy();
+
   const [selectedMode, setSelectedMode] = useState<QwackerMode>('none');
   const [level, setLevel] = useState(1);
 

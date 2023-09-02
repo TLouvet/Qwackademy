@@ -1,7 +1,3 @@
-export function isValidAnswer(answer: boolean, sequence: Map<string, number>, spell: string) {
-  return (answer && sequence.has(spell)) || (!answer && !sequence.has(spell));
-}
-
 export const MINIQWACKER_SPELLS = [
   'Flare',
   'Illuminate',

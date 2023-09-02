@@ -4,10 +4,11 @@ import { PropsWithChildren } from 'react';
 import { Container } from 'react-bootstrap';
 
 type PageLayoutProps = {
+  title: string;
   withBackLink?: boolean;
 };
 
-export default function PageLayout({ withBackLink = false, children }: PropsWithChildren<PageLayoutProps>) {
+export default function PageLayout({ withBackLink = false, children, title }: PropsWithChildren<PageLayoutProps>) {
   return (
     <Container>
       {withBackLink && (
@@ -16,6 +17,7 @@ export default function PageLayout({ withBackLink = false, children }: PropsWith
           <span className='ms-1'>Return to the Grand Hall</span>
         </Link>
       )}
+      <h1>{title}</h1>
       {children}
     </Container>
   );
